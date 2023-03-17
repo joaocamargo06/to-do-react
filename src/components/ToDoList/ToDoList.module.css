@@ -1,0 +1,98 @@
+.toDoList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+
+  position: absolute;
+  width: 46rem;
+  height: 17.9375rem;
+  left: calc(50% - 46rem/2);
+  top:18.1875rem;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.toDoInformation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.toDoInformation div {
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.toDoInformation div + div {
+  color: var(--purple);
+  font-weight: 700;
+}
+
+.toDoCounter {
+  padding: 0.125rem 0.5rem;
+
+  color: var(--gray-200);
+  background: var(--gray-400);
+  border-radius: 62.4375rem;
+}
+
+.toDos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.toDoContent li {
+  width: 46rem;
+  background: var(--gray-400);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 1rem;
+  border: 1px solid var(--gray-400);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.toDoContent li + li{
+  margin-top: 0.75rem;
+}
+
+.toDoList li input {
+  margin-left: 1rem;
+}
+
+.toDoList li input[type="checkbox"] {
+  appearance: none;
+  padding: 10px;
+  border: 1px solid var(--blue);
+  border-radius: 100%;
+}
+.toDoList li input[type="checkbox"]:checked {
+  background:var(--purple) ;
+  border: 1px solid var(--purple);
+}
+
+.toDoList li input[type="checkbox"]:checked + p{
+  text-decoration-line: line-through;
+  color: var(--gray-300);
+}
+
+.toDoList li p {
+  flex: 1;
+  color: var(--gray-100);
+  margin-left: 0.96875rem;
+}
+
+.toDoList li svg {
+  color: var(--gray-300);
+  margin-right: 1rem;
+  cursor: pointer;
+}

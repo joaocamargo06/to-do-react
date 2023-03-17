@@ -1,0 +1,50 @@
+.formTodo{
+  position: absolute; 
+  display: flex;
+  flex-direction: row;
+  width: 46rem;
+  left: calc(50% - 46rem/2);
+  top: 10.8125rem;
+  gap: 0.5rem;
+}
+
+.formTodo > input {
+  box-sizing: border-box;
+  width: 39.875rem;
+  height: 3.375rem;
+  color: var(--gray-300);
+  font-size: 1rem;
+  line-height: 22.4px;
+  font-weight: 400;
+  padding: 1rem;
+  border: 1px solid var(--gray-700);
+  background: var(--gray-500);
+  border-radius: 0.5rem;
+}
+
+.formTodo > button {
+  cursor: pointer;
+
+  width: 5.625rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 0.5rem;
+
+  width: 5.625rem;
+  height: 3.25rem;
+
+  background: var(--blue-dark);
+  border-radius: 0.5rem;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+  color: var(--gray-100);
+  border: none;
+
+  font-size: 0.875rem;
+}
