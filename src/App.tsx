@@ -3,7 +3,7 @@ import "./global.css";
 import { Header } from "./components/Header";
 import { InputTodo } from "./components/InputTodo";
 import { ToDoList } from "./components/ToDoList";
-import { Empty } from "./components/Empty";
+
 export interface StateTodo {
   id: number;
   todo: string;

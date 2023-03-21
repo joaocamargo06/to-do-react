@@ -13,6 +13,9 @@ export function ToDoList({ todos, deleteTodo }: PropsToDoList) {
   const [checkedValues, setCheckedValues] = useState([] as StateTodo[]);
   const quantityTodo = todos.length;
   const showSection = quantityTodo ? true : false;
+  const completedTodos = checkedValues.filter(
+    (todo) => todo.checked === true
+  ).length;
 
   function deleteItem(id: number) {
     const { indexTodo } = getExistTodo(id);
@@ -41,10 +44,6 @@ export function ToDoList({ todos, deleteTodo }: PropsToDoList) {
       setCheckedValues(newTodo);
     }
   }
-
-  const completedTodos = checkedValues.filter(
-    (todo) => todo.checked === true
-  ).length;
 
   function getExistTodo(id: number) {
     const findedTodo = todos.find((todo) => todo.id === id);
@@ -84,10 +83,8 @@ export function ToDoList({ todos, deleteTodo }: PropsToDoList) {
                 <input
                   type="checkbox"
                   name="input_todo"
-                  // checked={checked}
                   onChange={() => changeCheck(id)}
                 />
-                {checked}
                 <p>{todo}</p>
                 <Trash size={24} onClick={() => deleteItem(id)} />
               </li>
