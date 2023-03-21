@@ -96,3 +96,11 @@
   margin-right: 1rem;
   cursor: pointer;
 }
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
